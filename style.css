@@ -18,7 +18,7 @@
 }
 h2 {
   margin: 0;
-  font-size: clamp(4rem, 10vw, 7rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 0.9;
   font-weight: 900;
   letter-spacing: -0.04em;
@@ -26,31 +26,23 @@ h2 {
   color: white;
 }
 
+
+.content p {
+  color:white;
+background-color: purple;
+}
 .content > p {
   margin: 0;
-  color: #999;
+  color: white;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   line-height: 1.4;
 }
-
-.content p {
-  color:white;
-background-color: yellow;
-}
 #interests {
   margin-top: 32px;
   width: 100%;
-}
-
-#interests h3 {
-  margin: 0 0 12px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #aaa;
+  color: white;
 }
 
 #interests ul {
@@ -62,39 +54,30 @@ background-color: yellow;
   gap: 8px;
 }
 
-#interests li {
+#interests h3 {
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 10px 20px;
-  background: yellow;
-  border: 1px solid purple;
-  border-radius: 100px;
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
-  cursor: default;
+}
+
+#interests li {
+  background: purple;
+  border-color: goldenrod;
+  color: white;
 }
 
 #interests li:hover {
-  background: yellow;
-  color: white;
-  border-color: #000;
-  transform: translateY(-2px);
+  background: purple;
+  color: black;
 }
-#interests h3 {
-  color: purple;
-}
+
 
 .sidebar-img {
   width: 100%;
-  max-width: 760px;
+  max-width: 200px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
   border-radius: 16px;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   transition:
     filter 0.4s ease,
@@ -114,7 +97,7 @@ nav {
   margin-bottom: 48px;
   padding: 16px 24px;
   background: yellow;
-  border: 1px solid purple;
+  border: 1px solid goldenrod;
   border-radius: 12px;
 }
 
@@ -142,14 +125,13 @@ nav h1 {
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 8px;
-  transition:
-    background 0.25s ease,
+  transition:background 0.25s ease,
     color 0.25s ease;
 }
 
 .nav-li a:hover {
   background: purple;
-  color: #fff;
+  color: black;
 }
 nav h1 {
   color: white;
