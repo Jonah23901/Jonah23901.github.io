@@ -53,6 +53,7 @@ h2 {
   margin-top: 32px;
   width: 100%;
   color: black;
+  border: 3px solid goldenrod;
 }
 
 #interests ul {
