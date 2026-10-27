@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-color: blue;
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -47,7 +47,7 @@
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
         });
-
+      
         // Every 50 milliseconds, call the update Function (see below)
         setInterval(update, 50);
 
@@ -59,7 +59,7 @@
       box.css("left", newPositionX);
       box.css("top", newPositionY);
     }
-        }
+        
 
         // changes the text displayed on the Box
       function changeBoxText(newText) {
@@ -72,27 +72,28 @@
 
         // TODO 2 - Variable declarations
 var positionX = 0;
-positionX = positionX + 10;
 var points = 1;
 var speed = 10;
 var positionY = 0;
-postionY = positionY + 10;
 var speedY = 10;
-
+var randNum = Math.random() * 100;
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-          moveBoxTo(positionX);
-          positionX = positionX + speed;
+           positionX = positionX + speed;
+           positionY = positionY + speedY
+          moveBoxTo(positionX, positionY);
+         
         if(positionX > boardWidth){
           speed = speed * -1;
         }
         if(positionX < 0){
           speed = speed * -1;
-        if(positionY > boardHeight){
+        }
+          if(positionY > boardHeight){
           speedY = speedY * -1;
         }
         if(positionY < 0){
@@ -113,8 +114,8 @@ var speedY = 10;
           positionY = 0;
           changeBoxText(points);
            points++;
-          speed = 3 * points + 10;
-          speedY = 3 * points + 10;
+          speed = 1.35 * points + 10;
+          speedY = 1.35 * points + 10;
         }
 
 
