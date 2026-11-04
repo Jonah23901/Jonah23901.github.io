@@ -47,7 +47,9 @@
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
         });
-      
+        var randomNumberBetween0and10 = Math.random() * 10;
+        var colorStr = "rgb(50, 25, 250)";
+box.css("background-color", colorStr);
         // Every 50 milliseconds, call the update Function (see below)
         setInterval(update, 50);
 
@@ -76,7 +78,6 @@ var points = 1;
 var speed = 10;
 var positionY = 0;
 var speedY = 10;
-var randNum = Math.random() * 100;
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
@@ -84,9 +85,10 @@ var randNum = Math.random() * 100;
          */
         function update() {
            positionX = positionX + speed;
-           positionY = positionY + speedY
-          moveBoxTo(positionX, positionY);
-         
+           positionY = positionY + speedY;
+           colorStr = randomNumberBetween0and10;
+          
+           moveBoxTo(positionX, positionY);
         if(positionX > boardWidth){
           speed = speed * -1;
         }
