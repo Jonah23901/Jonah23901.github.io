@@ -343,7 +343,7 @@ var Gamification = (function () {
     if (keys["d"]) {
       player1.x += 3;
     }
-
+   
     // Keep player in bounds (wrap around screen)
     game.checkCirclePosition(player1);
   }
